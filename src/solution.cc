@@ -17,15 +17,11 @@ Student ReadStudentRecFromStream(std::istream& is) {
     return Student{};
   }
 
-  if(is.peek() != ' ') {
-    return Student{};
-  }
-
   if (!(is >> last_name) || (last_name.back() != comma)) {
     return Student{};
   }
 
-  if (!(is >> uin) || !(is >> comma)) {
+  if (!(is >> uin)) {
     return Student{};
   }
 
