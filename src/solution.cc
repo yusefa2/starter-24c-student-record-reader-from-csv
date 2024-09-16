@@ -2,6 +2,7 @@
 
 Student ReadStudentRecFromStream(std::istream& is) {
   char comma = ',';
+  char random;
   
   if (is.fail()) {
     return Student{};
@@ -26,5 +27,14 @@ Student ReadStudentRecFromStream(std::istream& is) {
   if (!(is >> gpa)) {
     return Student{};
   }
+
+  if (!(is >> random)) {
+    return Student{};
+  }
+  
+  Student student;
+  student.name = first_name + ' ' + last_name;
+  student.uin = uin;
+  student.gpa = gpa;
   return Student{};
 }
