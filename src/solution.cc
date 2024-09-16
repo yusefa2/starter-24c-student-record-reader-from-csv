@@ -3,7 +3,7 @@
 
 Student ReadStudentRecFromStream(std::istream& is) {
   char comma = 0;
-  char random;
+  char random = 0;
   std::string first_name;
   std::string last_name;
   unsigned int uin = 0;
