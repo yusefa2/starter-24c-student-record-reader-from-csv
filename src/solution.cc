@@ -9,10 +9,6 @@ Student ReadStudentRecFromStream(std::istream& is) {
   unsigned int uin;
   double gpa;
   
-  if (is.fail()) {
-    return Student{};
-  }
-  
   if (!(is >> first_name)) {
     return Student{};
   }
@@ -23,7 +19,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
 
   is.ignore();
 
-  if (!(is >> last_name) || (last_name.back() != ',')) {
+  if (!(is >> last_name) || last_name.empty() || (last_name.back() != ',')) {
     return Student{};
   }
 
