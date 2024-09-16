@@ -41,5 +41,5 @@ Student ReadStudentRecFromStream(std::istream& is) {
   student.full_name = first_name + ' ' + last_name;
   student.uin = uin;
   student.gpa = gpa;
-  return Student{};
+  return student;
 }
