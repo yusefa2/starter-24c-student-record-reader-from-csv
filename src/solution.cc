@@ -1,7 +1,4 @@
 #include "solution.hpp"
-#include <fstream>
-#include <string>
-#include "student.hpp"
 
 
 Student ReadStudentRecFromStream(std::istream& is) {
