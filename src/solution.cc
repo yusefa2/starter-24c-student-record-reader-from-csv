@@ -2,7 +2,7 @@
 
 
 Student ReadStudentRecFromStream(std::istream& is) {
-  char comma = ',';
+  char comma;
   char random;
   std::string first_name;
   std::string last_name;
@@ -27,7 +27,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
 
   last_name.pop_back();
 
-  if(!(is >> comma)) {
+  if(!(is >> comma) || (comma != ',')) {
     return Student{};
   }
 
@@ -35,7 +35,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     return Student{};
   }
 
-  if(!(is >> comma)) {
+  if(!(is >> comma) || (comma != ',')) {
     return Student{};
   }
 
