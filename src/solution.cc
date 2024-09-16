@@ -2,12 +2,12 @@
 
 
 Student ReadStudentRecFromStream(std::istream& is) {
-  char comma;
+  char comma = 0;
   char random;
   std::string first_name;
   std::string last_name;
-  unsigned int uin;
-  double gpa;
+  unsigned int uin = 0;
+  double gpa = 0.0;
   
   if (is.fail()) {
     return Student{};
