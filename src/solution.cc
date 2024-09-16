@@ -13,19 +13,15 @@ Student ReadStudentRecFromStream(std::istream& is) {
     return Student{};
   }
   
-  if (!(is >> first_name >> last_name)) {
+  if (!(is >> first_name)) {
     return Student{};
   }
 
-  if (!(is >> comma)) {
+  if (!(is >> last_name) || (last_name.back() != comma)) {
     return Student{};
   }
 
-  if (!(is >> uin)) {
-    return Student{};
-  }
-
-  if (!(is >> comma)) {
+  if (!(is >> uin) || (uin.back() != comma)) {
     return Student{};
   }
 
