@@ -29,7 +29,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     return Student{};
   }
 
-  if (!(is >> random)) {
+  if (gpa.back() == comma) {
     return Student{};
   }
   
