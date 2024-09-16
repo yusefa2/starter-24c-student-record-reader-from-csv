@@ -25,7 +25,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     return Student{};
   }
 
-  if (!(is >> uin)) || !(is >> comma) {
+  if (!(is >> uin) || !(is >> comma)) {
     return Student{};
   }
 
